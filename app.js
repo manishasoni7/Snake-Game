@@ -34,7 +34,7 @@ function main(){
                     snake.total = 0;
                     snake.tail = [];
                 }
-            },7000);
+            },15000);
         }
 
         snake.checkCollision();
@@ -47,7 +47,7 @@ function main(){
             snake.total = 0;
             snake.tail = [];
         }
-    },7000);
+    },15000);
 } ;   
     
 window.addEventListener('keydown',(e)=>{
