@@ -5,7 +5,7 @@ function Snake(){
     this.yspeed=0;
     this.total = 0;
     this.tail = [];
-
+    this.mytime=20000;
 
     this.draw = ()=> {
         ctx.fillStyle = "#FFFFFF";
@@ -77,6 +77,10 @@ function Snake(){
         if (this.x === food.xfood &&
           this.y === food.yfood) {
           this.total++;
+          if(this.mytime<62000)
+            {
+                this.mytime+=500;
+            }
           return true;
         }    
         return false;
@@ -86,7 +90,7 @@ function Snake(){
         for (var i=0; i<this.tail.length; i++) {
           if (this.x === this.tail[i].x &&
             this.y === this.tail[i].y) {
-            alert("Game Over");
+            alert("Game Over!!!");
             this.total = 0;
             this.tail = [];
           }

@@ -30,11 +30,11 @@ function main(){
             clearTimeout(mytimer);
             mytimer =window.setInterval(()=>{
                 if(!snake.eat(food)){
-                    alert("Time Up");
+                    alert("Time Up!!!");
                     snake.total = 0;
                     snake.tail = [];
                 }
-            },15000);
+            },snake.mytime);
         }
 
         snake.checkCollision();
@@ -43,11 +43,11 @@ function main(){
     },120);
     var mytimer =window.setInterval(()=>{
         if(!snake.eat(food)){
-            alert("Time Up");
+            alert("Time Up!!!");
             snake.total = 0;
             snake.tail = [];
         }
-    },15000);
+    },18000);
 } ;   
     
 window.addEventListener('keydown',(e)=>{
